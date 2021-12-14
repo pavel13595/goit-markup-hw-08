@@ -1,0 +1,46 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-size: 1600px;
+  background-color: $bg-color;
+
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bimg-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero__title {
+  width: 696px;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.06em;
+  color: $accent-white-color;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.37;
+  text-transform: uppercase;
+}
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  margin: auto;
+  letter-spacing: 0.06em;
+  border: 0;
+  background-color: $accent-text-color;
+  color: $accent-white-color;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 4px;
+  padding: 10px 32px;
+  display: flex;
+  min-width: 200px;
+}

@@ -1,0 +1,31 @@
+.prof__label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: $accent-white-color;
+  text-align: center;
+  position: absolute;
+  text-transform: uppercase;
+  bottom: 0px;
+  width: 370px;
+  line-height: 70px;
+}
+.prof__list {
+  display: flex;
+  position: relative;
+}
+.prof__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.prof__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-top: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}

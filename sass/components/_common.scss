@@ -21,15 +21,35 @@ img {
   height: auto;
 }
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  @media screen and (min-width: $min-mobile) {
+    width: $min-mobile;
+  }
+  @media screen and (min-width: $min-tablet) {
+    width: $min-tablet;
+  }
+  @media screen and (min-width: $min-desktop) {
+    width: $min-desktop;
+  }
 }
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and(min-width: $min-mobile) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and(min-width: $min-tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and(min-width: $min-desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .section.no-padding {
   padding-top: 0;

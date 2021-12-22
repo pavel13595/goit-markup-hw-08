@@ -10,14 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
-    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
 
@@ -25,10 +17,13 @@
     <!-- Шапка -->
     <header class="header">
       <div class="container header__container">
+        <a class="logo-part" href="/"><span class="logo-second-part">Web</span>Studio</a>
+
         <nav class="nav">
-          <a class="logo-part" href="/"><span class="logo-second-part">Web</span>Studio</a>
           <ul class="nav__list list">
-            <li class="nav__item"><a href="./index.html" class="nav__link">Студия</a></li>
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link">Студия</a>
+            </li>
             <li class="nav__item">
               <a href="./portfolio.html" class="nav__link current">Портфолио</a>
             </li>
@@ -55,6 +50,62 @@
             </a>
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-button js-open-menu"
+          aria-label="Переключатель мобильного меню"
+          aria-expanded="false"
+        >
+          <svg class="menu-button__icon" width="40" height="40">
+            <use class="menu-button__icon-menu" href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu">
+          <button
+            type="button"
+            class="mobile-menu__button js-close-menu"
+            aria-label="Переключатель мобильного меню"
+          >
+            <svg class="menu-button__icon" width="40" height="40">
+              <use class="menu-button__icon-cross" href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+              <a href="./index.html" class="mobile-nav__link">Студия</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="./portfolio.html" class="mobile-nav__link mobile-nav__link--current"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-nav__item"><a href="" class="mobile-nav__link">Контакты</a></li>
+          </ul>
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__tel">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__mail"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social">
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Instagram <span class="stik">|</span></a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Twitter <span class="stik">|</span></a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Facebook <span class="stik">|</span></a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Linkedin </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -79,11 +130,16 @@
               <button type="button" class="filter__button">Маркетинг</button>
             </li>
           </ul>
-          <ul class="portfolio list">
+          <ul class="portfolio__list list">
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio1.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio1.jpg 1x, ./images/portfolio1@2x.jpg 2x"
+                    src="./images/portfolio1.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -102,7 +158,12 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio2.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio2.jpg 1x, ./images/portfolio2@2x.jpg 2x"
+                    src="./images/portfolio2.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -121,7 +182,12 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio3.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio3.jpg 1x, ./images/portfolio3@2x.jpg 2x"
+                    src="./images/portfolio3.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -140,7 +206,12 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio4.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio4.jpg 1x, ./images/portfolio4@2x.jpg 2x"
+                    src="./images/portfolio4.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -159,7 +230,12 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio5.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio5.jpg 1x, ./images/portfolio5@2x.jpg 2x"
+                    src="./images/portfolio5.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -178,7 +254,12 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio6.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio6.jpg 1x, ./images/portfolio6@2x.jpg 2x"
+                    src="./images/portfolio6.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -197,7 +278,12 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio7.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio7.jpg 1x, ./images/portfolio7@2x.jpg 2x"
+                    src="./images/portfolio7.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -216,7 +302,12 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio8.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio8.jpg 1x, ./images/portfolio8@2x.jpg 2x"
+                    src="./images/portfolio8.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -235,7 +326,12 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link">
                 <div class="thumb">
-                  <img src="./images/portfolio9.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio9.jpg 1x, ./images/portfolio9@2x.jpg 2x"
+                    src="./images/portfolio9.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <div class="thumb__box">
                     <p class="thumb__text">
                       Технокряк это современная площадка распространения коронавируса. Компании
@@ -258,52 +354,54 @@
     <!-- Подвал -->
     <footer class="footer">
       <div class="footer-container container">
-        <div class="address-box">
-          <a href="/" class="footer-logo link"><span class="logo-second-part">Web</span>Studio</a>
-          <address class="address-box__address">г. Киев, пр-т Леси Украинки, 26</address>
-          <ul class="footer-contacts list">
-            <li class="footer-contacts__item">
-              <a href="mailto:info@devstudio.com" class="footer-contacts__link link"
-                >info@devstudio.com
-              </a>
-            </li>
-            <li class="footer-contacts__item">
-              <a href="tel:+380961111111" class="footer-contacts__link link">+38 096 111 11 11</a>
-            </li>
-          </ul>
-        </div>
-        <div class="social">
-          <h2 class="social__title">Присоединяйтесь</h2>
-          <ul class="social__icon list">
-            <li class="social__item">
-              <a href="" class="social__link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#vector"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link">
-                <svg class="social__icon" width="20" height="20">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer-box">
+          <div class="address-box">
+            <a href="/" class="footer-logo link"><span class="logo-second-part">Web</span>Studio</a>
+            <address class="address-box__address">г. Киев, пр-т Леси Украинки, 26</address>
+            <ul class="footer-contacts list">
+              <li class="footer-contacts__item">
+                <a href="mailto:info@devstudio.com" class="footer-contacts__link link"
+                  >info@devstudio.com
+                </a>
+              </li>
+              <li class="footer-contacts__item">
+                <a href="tel:+380961111111" class="footer-contacts__link link">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </div>
+          <div class="social">
+            <h2 class="social__title">Присоединяйтесь</h2>
+            <ul class="social__icon list">
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#vector"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg class="social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- Подвал форм -->
         <form class="subscribe">
@@ -320,5 +418,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

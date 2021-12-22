@@ -5,15 +5,6 @@
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
 }
-.filter {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 50px;
-
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
 
 .portfolio-title {
   position: absolute;
@@ -39,24 +30,40 @@
   color: $text-color;
 }
 
-.portfolio {
-  padding-left: 0;
-  margin-top: 0;
-
-  margin-top: -30px;
-  margin-left: -30px;
-
+.portfolio__list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
+  @media screen and (min-width: $min-mobile) {
+    width: 450px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $min-tablet) {
+    width: $min-tablet;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    width: $min-desktop;
+  }
 }
 .portfolio__item {
-  flex-basis: calc((100% - 90px) / 3);
+  justify-content: center;
 
-  margin-top: 30px;
-  margin-left: 30px;
-
-  background: $accent-white-color;
+  display: flex;
+  &:not(:last-child) {
+    @media screen and (max-width: $max-mobile) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $min-tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 }
 .portfolio__link {
   display: block;
@@ -98,48 +105,4 @@
   font-size: 18px;
   line-height: 1.55;
   color: $accent-white-color;
-}
-// Кнопки
-
-.button.primary {
-  background-color: $accent-text-color;
-  color: $accent-white-color;
-}
-.filter__button {
-  color: $primary-text-color;
-  background-color: $second-bg-color;
-  transition-property: color, border-color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.filter__button:hover {
-  background-color: $accent-text-color;
-  color: $accent-white-color;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.button.secondary:focus {
-  background-color: $accent-text-color;
-  color: $accent-white-color;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.filter__button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  padding: 6px 22px;
-  border-color: $second-bg-color;
-  border-radius: 4px;
-  border-style: none;
-  font-family: inherit;
-  min-width: 73px;
-  cursor: pointer;
-}
-.filter__item:not(:last-child) {
-  margin-right: 8px;
-}
-.filter__item {
-  display: inline-block;
 }

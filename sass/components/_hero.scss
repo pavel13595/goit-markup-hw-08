@@ -9,23 +9,60 @@
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/bimg-hero.jpg');
+    url('../images/bimg-hero-m.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @media screen and (min-width: $min-desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bimg-hero-m@2x.jpg');
+  }
+  @media screen and (min-width: $min-tablet) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bimg-hero-t.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bimg-hero-t@2x.jpg');
+    }
+  }
+  @media screen and (min-width: $min-desktop) {
+    background-size: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/bimg-hero-d.jpg');
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/bimg-hero-d@2x.jpg');
+    }
+  }
 }
+
 .hero__title {
-  width: 696px;
+  width: 360px;
   margin-bottom: 30px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  letter-spacing: 0.06em;
   color: $accent-white-color;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.37;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  @media screen and (min-width: $min-desktop) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.37;
+  }
 }
 .button {
   font-weight: 700;

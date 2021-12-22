@@ -1,3 +1,10 @@
+.prof {
+  @media screen and (min-width: $min-desktop) {
+    display: block;
+  }
+  display: none;
+  padding-top: 0;
+}
 .prof__label {
   font-style: normal;
   font-weight: 700;

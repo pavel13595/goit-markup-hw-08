@@ -1,5 +1,6 @@
 @import './utils/variables';
 @import './base/normalize';
+@import './utils/brackpoints';
 @import './components/common';
 @import './components/hero';
 @import './components/header';
@@ -8,5 +9,7 @@
 @import './components/prof';
 @import './components/team';
 @import './components/client';
+@import './components/filter';
 @import './components/portfolio';
 @import './components/backdrop';
+@import './components/mobile-menu';

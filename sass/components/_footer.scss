@@ -4,9 +4,24 @@
   padding-top: 60px;
 }
 .footer-container {
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
+  @media screen and (min-width: $min-desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.footer-box {
+  justify-content: space-around;
+  @media screen and (max-width: $max-tablet) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $min-tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $min-desktop) {
+    margin-right: 93px;
+    align-items: baseline;
+  }
 }
 .footer-logo {
   display: inline-block;
@@ -32,7 +47,13 @@
   color: $accent-text-color;
 }
 .address-box {
-  margin-right: 70px;
+  @media screen and (max-width: $max-mobile) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    margin-right: 70px;
+  }
 }
 .footer-contacts__item:not(:last-child) {
   margin-bottom: 9px;
@@ -64,6 +85,7 @@
   display: flex;
   fill: $border-color;
   fill: currentColor;
+  justify-content: center;
 }
 
 .social__item:not(:last-child) {
@@ -86,15 +108,23 @@
 /* Подвал форм */
 
 .subscribe {
-  display: flex;
-  align-items: flex-end;
-  margin: 0;
-  margin-left: 93px;
+  @media screen and (max-width: $max-tablet) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $min-desktop) {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+  }
 }
 .subscribe__label {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  @media screen and (min-width: $min-desktop) {
+    flex-grow: 1;
+    margin-right: 12px;
+  }
 }
 .subscribe__text {
   margin-bottom: 20px;
@@ -105,6 +135,9 @@
   text-transform: uppercase;
 
   color: $accent-white-color;
+  @media screen and (max-width: $max-tablet) {
+    text-align: center;
+  }
 }
 .subscribe__input {
   font-size: 15px;
@@ -112,7 +145,6 @@
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   display: inline-block;
-  width: 358px;
   padding: 15px 16px;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -120,6 +152,9 @@
   margin: 0;
   background-color: inherit;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: $max-tablet) {
+    margin-bottom: 20px;
+  }
 }
 .subscribe__input:focus-visible {
   outline: none;
@@ -143,6 +178,9 @@
   letter-spacing: 0.06em;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: $max-tablet) {
+    margin: 0 auto;
+  }
 }
 .subscribe__button:focus,
 .subscribe__button:hover {
